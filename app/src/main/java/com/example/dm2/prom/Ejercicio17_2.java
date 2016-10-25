@@ -29,11 +29,11 @@ public class Ejercicio17_2 extends AppCompatActivity {
         else {
             if (txtusu.getText().toString().equals("garazi") && txtcontr.getText().toString().equals("1234")) {
                 Intent intent = new Intent(Ejercicio17_2.this, Ejercicio17_2a.class);
-                intent.putExtra("opcion", "CORRECTAS");
+                intent.putExtra("opcion", "El usuario y la password son CORRECTAS");
                 startActivity(intent);
             } else {
                 Intent intent = new Intent(Ejercicio17_2.this, Ejercicio17_2a.class);
-                intent.putExtra("opcion", "INCORRECTAS");
+                intent.putExtra("opcion", "Usuario y/o password INCORRECTAS");
                 startActivity(intent);
             }
         }

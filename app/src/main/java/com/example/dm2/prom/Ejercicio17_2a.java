@@ -19,12 +19,11 @@ public class Ejercicio17_2a extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String str = extras.getString("opcion");
 
-        opc.setText(getString(R.string.opcion)+" "+str);
+        opc.setText(str);
     }
 
     public void volver(View v)
     {
-        Intent intent = new Intent(Ejercicio17_2a.this, Ejercicio17_2.class);
-        startActivity(intent);
+        finish();
     }
 }

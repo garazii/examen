@@ -41,7 +41,6 @@ public class Ejercicio17_1 extends AppCompatActivity {
 
     public void volver(View v)
     {
-        Intent intent = new Intent(Ejercicio17_1.this, Ejercicio17.class);
-        startActivity(intent);
+        finish();
     }
 }
