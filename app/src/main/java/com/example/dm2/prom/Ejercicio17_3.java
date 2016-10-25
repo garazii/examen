@@ -12,6 +12,9 @@ public class Ejercicio17_3 extends AppCompatActivity {
     private EditText txtnum1;
     private EditText txtnum2;
     private EditText txtres;
+    private TextView preg;
+    private int contcorrec;
+    private int contincorrec;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +24,21 @@ public class Ejercicio17_3 extends AppCompatActivity {
         txtnum1 = (EditText) findViewById(R.id.txtnum1);
         txtnum2 = (EditText) findViewById(R.id.txtnum2);
         txtres = (EditText) findViewById(R.id.txtres);
+        preg = (TextView) findViewById(R.id.preg);
 
+        random();
+
+        contcorrec=0;
+        contincorrec=0;
+    }
+
+    private void random()
+    {
         int num1 = (int) (Math.random()*100+1);
         txtnum1.setText(String.valueOf(num1));
         int num2 = (int) (Math.random()*100+1);
         txtnum2.setText(String.valueOf(num2));
+        txtres.setText("");
     }
 
     public void comprobar(View v)
@@ -33,25 +46,35 @@ public class Ejercicio17_3 extends AppCompatActivity {
         if(txtres.getText().toString().equals(""))
         {
             Toast.makeText(this,"Introduce un resultado", Toast.LENGTH_LONG).show();
-
         }
         else
         {
-            int n1 = Integer.parseInt(txtnum1.getText().toString());
-            int n2 = Integer.parseInt(txtnum2.getText().toString());
-            int sum = n1+n2;
-            if (sum==Integer.parseInt(txtres.getText().toString()))
+            Intent intent = new Intent(Ejercicio17_3.this, Ejercicio17_3a.class);
+            intent.putExtra("n1",txtnum1.getText().toString());
+            intent.putExtra("n2",txtnum2.getText().toString());
+            intent.putExtra("resp",txtres.getText().toString());
+
+            startActivityForResult(intent,1);
+        }
+    }
+
+    protected  void onActivityResult (int requestCode, int resultCode, Intent data)
+    {
+        if (requestCode==1 && resultCode==RESULT_OK)
+        {
+            random();
+            String opc = data.getExtras().getString("opcion");
+
+            if(opc.equalsIgnoreCase("correcto"))
             {
-                Intent intent = new Intent(Ejercicio17_3.this, Ejercicio17_3a.class);
-                intent.putExtra("result", "CORRECTA");
-                startActivity(intent);
+                contcorrec++;
             }
             else
             {
-                Intent intent = new Intent(Ejercicio17_3.this, Ejercicio17_3a.class);
-                intent.putExtra("result", "INCORRECTA");
-                startActivity(intent);
+                contincorrec++;
             }
+            preg.setText("Preguntas correctas: "+contcorrec+" incorrectas: "+contincorrec);
         }
+
     }
 }

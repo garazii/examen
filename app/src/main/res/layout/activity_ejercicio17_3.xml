@@ -54,10 +54,10 @@
         android:text="COMPROBAR RESULTADO"
         android:onClick="comprobar"/>
 
-    <TextView android:id="@+id/preguntas"
+    <TextView android:id="@+id/preg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="Preguntas correctas" />
+        android:text="Preguntas correctas: 0 incorrectas: 0" />
 
 </LinearLayout>

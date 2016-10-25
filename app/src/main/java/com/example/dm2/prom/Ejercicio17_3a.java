@@ -15,15 +15,34 @@ public class Ejercicio17_3a extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejercicio17_3a);
 
-        Bundle extras = getIntent().getExtras();
-        String str = extras.getString("result");
+        String mensaje;
 
-        result.setText(getString(R.string.result)+" "+str);
+        result = (TextView) findViewById(R.id.result);
+
+
+        Bundle extras = getIntent().getExtras();
+        Integer n1 = Integer.parseInt(extras.getString("n1"));
+        Integer n2 = Integer.parseInt(extras.getString("n2"));
+        Integer resp = Integer.parseInt(extras.getString("resp"));
+
+        if((n1+n2)==resp)
+        {
+            result.setText(getString(R.string.result)+" CORRECTA");
+            mensaje="correcto";
+        }
+        else
+        {
+            result.setText(getString(R.string.result)+" INCORRECTA");
+            mensaje="incorrecto";
+        }
+
+        Intent intent = new Intent();
+        intent.putExtra("opcion", mensaje);
+        setResult(RESULT_OK, intent);
     }
 
     public void volver(View v)
     {
-        Intent intent = new Intent(Ejercicio17_3a.this, Ejercicio17_3.class);
-        startActivity(intent);
+        finish();
     }
 }
