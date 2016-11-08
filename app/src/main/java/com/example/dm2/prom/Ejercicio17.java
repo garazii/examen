@@ -27,10 +27,10 @@ public class Ejercicio17 extends AppCompatActivity {
     {
         Intent intent = new Intent(Ejercicio17.this, Ejercicio17_3.class);
         startActivity(intent);
-    }/*
+    }
     public void actividad4(View v)
     {
         Intent intent = new Intent(Ejercicio17.this, Ejercicio17_4.class);
         startActivity(intent);
-    }*/
+    }
 }
