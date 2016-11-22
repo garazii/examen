@@ -8,18 +8,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.dm2.prom.Ejercicio17_2a">
+    tools:context="com.example.dm2.prom.Actividad2">
 
-    <TextView android:id="@+id/opc"
+    <ImageButton android:id="@+id/añana"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="añana"
+    android:src="@drawable/aniana"/>
+
+    <ImageButton android:id="@+id/mundaka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"/>
-      //  android:text="@string/opcion" />
+        android:onClick="mundaka"
+        android:src="@drawable/mundaka"/>
 
-    <Button android:id="@+id/volver"
+    <ImageButton android:id="@+id/gernika"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="VOLVER"
-        android:onClick="volver"/>
+        android:onClick="gernika"
+        android:src="@drawable/gernika"/>
+
+    <ImageButton android:id="@+id/laguardia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="laguardia"
+        android:src="@drawable/laguardia"/>
 </LinearLayout>

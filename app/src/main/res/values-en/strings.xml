@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">1st Assessment Exam</string>
+    <string name="act1">ACTIVITY 01</string>
+    <string name="act2">ACTIVITY 02</string>
+    <string name="act3">ACTIVITY 03</string>
+    <string name="actfin">EXIT</string>
+    <string name="toast">Activity not implemented</string>
+</resources>

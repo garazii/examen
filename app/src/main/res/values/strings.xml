@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">PROM</string>
-    <string name="condicion">Aceptas condiciones:</string>
-    <string name="opcion">USUARIO Y PASSWORD </string>
-    <string name="result">El resultado de la operacion es </string>
+    <string name="app_name">Examen 1ª Eval</string>
+    <string name="act1">ACTIVIDAD 01</string>
+    <string name="act2">ACTIVIDAD 02</string>
+    <string name="act3">ACTIVIDAD 03</string>
+    <string name="actfin">SALIR</string>
+    <string name="toast">Actividad no implementada</string>
 </resources>

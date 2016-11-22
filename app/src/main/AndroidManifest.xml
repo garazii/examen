@@ -33,7 +33,20 @@
         <activity android:name=".Ejercicio17_3" />
         <activity android:name=".Ejercicio17_3a" />
         <activity android:name=".Ejercicio17_4" />
-        <activity android:name=".Ejercicio17_4a"></activity>
+        <activity android:name=".Ejercicio17_4a" />
+        <activity
+            android:name=".Ejercicio18"
+            android:label="WhatsApp" />
+        <activity android:name=".Examen" />
+        <activity
+            android:name=".Actividad1"
+            android:label="Actividad 1" />
+        <activity
+            android:name=".Actividad2"
+            android:label="Actividad 2" />
+        <activity
+            android:name=".Actividad1b"
+            android:label="Actividad 1b" />
     </application>
 
 </manifest>
